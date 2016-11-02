@@ -16,6 +16,6 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import <FBNotifications/FBNotificationsManager.h>
-#import <FBNotifications/FBNConstants.h>
-#import <FBNotifications/FBNCardViewController.h>
+#import "FBNotificationsManager.h"
+#import "FBNConstants.h"
+#import "FBNCardViewController.h"
