@@ -316,7 +316,6 @@
         if ([delegate respondsToSelector:@selector(pushCardViewController:willDismissWithOpenURL:)]) {
             [delegate pushCardViewController:self willDismissWithOpenURL:url];
         }
-        [[UIApplication sharedApplication] openURL:url];
     } else {
         if ([delegate respondsToSelector:@selector(pushCardViewControllerWillDismiss:)]) {
             [delegate pushCardViewControllerWillDismiss:self];
@@ -324,7 +323,9 @@
     }
     [self.assetsController clearAssetContentCacheForCardPayload:self.payload];
 
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [[UIApplication sharedApplication] openURL:url];
+    }];
 }
 
 ///--------------------------------------
